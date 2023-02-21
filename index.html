@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css?v=0" rel="stylesheet">
+    <script src="https://cdn.ethers.io/lib/ethers-5.4.umd.min.js" type="application/javascript"></script>
+    <script src = "script.js?v=0"></script>	
+    <title>Rock Paper Scissors on BNB Chain</title>
+</head>
+<body>
+    <div class="background_wrap">
+		<div class="overlay"></div>
+	</div>
+    <div class="contact">
+        <div class="container">
+            <h1>Rock Paper Scissors on BNB Chain</h1>
+            <div id="connector">
+                <button class="btn-secondary" style="width: 100%;"onclick="walletConnect()">Please connect your wallet!</button>
+            </div>
+            <div id="game" style="display: none;">
+                <p>
+                    Add amount in BNB to play <input id="amount" type="number" min="1" value="1"> from 0.01 BNB
+                </p>
+                <p>
+                    <button class="btn-default" style="width: 31%;" onclick="choice(0)">Rock</button>
+                    <button class="btn-default" style="width: 31%;" onclick="choice(1)">Paper</button>
+                    <button class="btn-default" style="width: 31%;" onclick="choice(2)">Scissors</button>
+                </p>
+                <p>
+                    <button id="btnGetResult" class="btn-secondary" style="width: 100%; display: none;"onclick="handleEvent()">Get last result</button>
+                </p>
+                <p>
+                    <span id="resultLog"></span>
+                </p>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
